@@ -1,0 +1,4 @@
+Django==4.2.11
+requests
+python-dotenv
+python-docx

@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: django_dashboard
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8015:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=data_dashboard_project.settings
